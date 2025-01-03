@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8">
+      <title>Portfolio</title>
+      <link rel="stylesheet" href="Style.css">
+   </head>
+   <body>
+      <div class="tab">
+         <button class="bouton-onglet" onclick="window.location.href='Index.html'">Acueil</button>
+         <button class="bouton-onglet" onclick="window.location.href='#about'">À Propos</button>
+         <button class="bouton-onglet" onclick="window.location.href='Projets.html'">Projets</button>
+         <button class="bouton-onglet" onclick="window.location.href='Competences.html'">Compétences</button>
+         <button class="bouton-onglet" onclick="window.location.href='#contact'">Contact</button>
+      </div>
+      <main class="contenu">
+         <section id="introduction" class="section section-introduction">
+            <h1>Bienvenue sur Mon Portfolio</h1>
+            <p>Une vitrine de mon parcours et de mes projets.</p>
+         </section>
+         <div class="separateur vague"></div>
+         <section id="about" class="section section-about">
+            <h2>À Propos de Moi</h2>
+            <div class="conteneur-a-propos">
+               <p>
+                  Je m'appelle <strong>Léo Péron</strong>, étudiant en première année de BUT Informatique à Blagnac, Toulouse. 
+                  Passionné par la technologie et l'innovation, je développe des compétences en programmation, en conception d’applications, 
+                  et en résolution de problèmes techniques. Mon objectif est de contribuer à des projets ambitieux qui allient créativité 
+                  et efficacité.
+               </p>
+               <div class="details-a-propos">
+                  <div>
+                     <h3>Compétences</h3>
+                     <ul>
+                        <li>Programmation (Java, Python, HTML/CSS)</li>
+                        <li>Conception et développement d'applications</li>
+                        <li>Résolution de problèmes techniques</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3>Atouts</h3>
+                     <ul>
+                        <li>Organisation et rigueur</li>
+                        <li>Autonomie et esprit d’équipe</li>
+                        <li>Adaptabilité face aux défis</li>
+                     </ul>
+                  </div>
+               </div>
+               <p>
+                  En dehors de mes études, je pratique le <strong>badminton</strong> et joue de la <strong>batterie</strong>, deux activités 
+                  qui cultivent ma persévérance, ma créativité et ma discipline.
+               </p>
+            </div>
+         </section>
+         <div class="separateur diagonale"></div>
+         <section id="projets" class="projets-section">
+            <h2 class="titre-mes-projets">Mes Projets Personnels</h2>
+            <div class="projet">
+               <div class="projet-image-container">
+                  <a href="#img1" class="projet-image-link">
+                  <img src="Images/Roblox_SbProject.png" alt="Projet Roblox" class="projet-image">
+                  </a>
+               </div>
+               <div class="projet-contenu">
+                  <h2>Interpréteur Lua 5.1 (Luau)</h2>
+                  <p>Plus couramment appelé « Script Builder Place » dans Roblox est une expérience où les joueurs peuvent écrire et exécuter leurs propres scripts Lua en temps réel. Elle offre un éditeur de code intégré, un environnement sécurisé (sandbox), et des outils pour tester des idées ou apprendre le développement dans Roblox, celle-ci possède de multiples fonctions personnalisables afin d’améliorer le confort des utilisateurs.</p>
+                  <a href="Projets.html" class="en-savoir-plus">En Savoir Plus</a>
+               </div>
+            </div>
+            <div class="projet reverse">
+               <div class="projet-image-container">
+                  <a href="#img2" class="projet-image-link">
+                  <img src="Images/ChromeExtenstion.png" alt="Extension Chrome" class="projet-image">
+                  </a>
+               </div>
+               <div class="projet-contenu">
+                  <h2>Extension Chrome</h2>
+                  <p>Ce projet est une extension chrome qui extrait le texte provenant d’images sur un site, le traduit et replace celui-ci sur le texte précédent afin de pouvoir lire dans le langage correct. Principalement utilisé pour lire des mangas (scans) en ligne, qui n’ont pas encore été traduit (pour les impatients).</p>
+                  <a href="Projets.html" class="en-savoir-plus">En Savoir Plus</a>
+               </div>
+            </div>
+         </section>
+         <div class="separateur vague-inverse"></div>
+         <section id="contact" class="section section-contact">
+            <h2>Contactez-Moi</h2>
+            <div class="infos-contact">
+               <p><strong>Mail :</strong> <a href="mailto:leo.peron33@gmail.com">leo.peron33@gmail.com</a></p>
+               <p><strong>Téléphone :</strong> 0645908781</p>
+               <p><strong>Discord :</strong> leoperon.</p>
+            </div>
+         </section>
+      </main>
+      <pied-de-page class="pied-de-page">
+         <p>&copy; 2024 LEO PERON 2A. Tous droits réservés.</p>
+      </pied-de-page>
+   </body>
+</html>
