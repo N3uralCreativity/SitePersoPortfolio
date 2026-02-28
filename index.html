@@ -1,109 +1,282 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="fr">
-   <head>
-      <meta charset="UTF-8">
-      <title>Portfolio</title>
-      <link rel="stylesheet" href="Style.css">
-   </head>
-   <body>
-      <div class="tab">
-         <button class="bouton-onglet" onclick="window.location.href='index.html'">Accueil</button>
-         <button class="bouton-onglet" onclick="window.location.href='#about'">À Propos</button>
-         <button class="bouton-onglet" onclick="window.location.href='Projets.html'">Projets</button>
-         <button class="bouton-onglet" onclick="window.location.href='Competences.html'">Compétences</button>
-         <button class="bouton-onglet" onclick="window.location.href='#contact'">Contact</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta id="meta-description" name="description" content="Portfolio de Leo Peron - developpeur logiciel axe qualite produit, securite et performance.">
+  <meta name="theme-color" content="#0f2233">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <title>Leo Peron | Portfolio Developpeur Logiciel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip_link">Aller au contenu</a>
+
+  <div class="site-bg" aria-hidden="true">
+    <span class="bg-orb orb-one"></span>
+    <span class="bg-orb orb-two"></span>
+    <span class="bg-grid"></span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Aller a l'accueil" data-i18n-aria-label="brand.home_aria">
+      <span class="brand-mark"></span>
+      <span class="brand-text">LEO PERON</span>
+      <span class="brand-role" data-i18n="brand.role">Developpeur Logiciel</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="sr-only" data-i18n="nav.open_menu">Ouvrir le menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Navigation principale" data-i18n-aria-label="nav.aria_label">
+      <a href="#home" data-i18n="nav.home">Accueil</a>
+      <a href="#approach" data-i18n="nav.approach">Approche</a>
+      <a href="#projects" data-i18n="nav.projects">Projets</a>
+      <a href="Projets.html" data-i18n="nav.library">Bibliotheque</a>
+      <a href="#stack" data-i18n="nav.stack">Stack</a>
+      <a href="#timeline" data-i18n="nav.timeline">Parcours</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="lang-switch" role="group" aria-label="Selection de langue" data-i18n-aria-label="lang.aria_label">
+      <button class="lang-btn is-active" type="button" data-lang="fr" aria-pressed="true">FR</button>
+      <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <noscript>
+    <p class="noscript-banner" data-i18n="noscript.banner">JavaScript est desactive. Le site reste consultable, mais les animations et les filtres ne sont pas actifs.</p>
+  </noscript>
+
+  <main id="main-content">
+    <section id="home" class="hero section-shell reveal">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">PORTFOLIO 2026</p>
+        <h1 data-i18n="hero.title">Je conçois et livre des experiences logicielles robustes.</h1>
+        <p class="hero-lead" data-i18n="hero.lead">Je suis Leo Peron, developpeur logiciel focalise sur la qualite produit, une approche securite-first et des interfaces pensees avec intention.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects" data-i18n="hero.cta_projects">Explorer les projets</a>
+          <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta_contact">Demarrer une discussion</a>
+        </div>
+        <ul class="metrics" aria-label="Indicateurs cles" data-i18n-aria-label="hero.metrics_aria">
+          <li>
+            <strong class="metric-value" data-counter="8949">8949</strong>
+            <span data-i18n="hero.metric_lines">Lignes sur Moon's Script Builder</span>
+          </li>
+          <li>
+            <strong class="metric-value" data-counter="206">206</strong>
+            <span data-i18n="hero.metric_commands">Commandes en production</span>
+          </li>
+          <li>
+            <strong class="metric-value" data-counter="1000000" data-format="compact">1M</strong>
+            <span data-i18n="hero.metric_players">Joueurs atteints</span>
+          </li>
+        </ul>
       </div>
-      <main class="contenu">
-         <section id="introduction" class="section section-introduction">
-            <h1>Bienvenue sur Mon Portfolio</h1>
-            <p>Une vitrine de mon parcours et de mes projets.</p>
-         </section>
-         <div class="separateur vague"></div>
-         <section id="about" class="section section-about">
-            <h2>À Propos de Moi</h2>
-            <div class="conteneur-a-propos">
-               <p>
-                  Je m'appelle <strong>Léo Péron</strong>, étudiant en première année de BUT Informatique à Blagnac, Toulouse. 
-                  Passionné par la technologie et l'innovation, je développe des compétences en programmation, en conception d’applications, 
-                  et en résolution de problèmes techniques. Mon objectif est de contribuer à des projets ambitieux qui allient créativité 
-                  et efficacité.
-               </p>
-               <div class="details-a-propos">
-                  <div>
-                     <h3>Compétences</h3>
-                     <ul>
-                        <li>Programmation (Java, Python, HTML/CSS)</li>
-                        <li>Conception et développement d'applications</li>
-                        <li>Résolution de problèmes techniques</li>
-                     </ul>
-                  </div>
-                  <div>
-                     <h3>Atouts</h3>
-                     <ul>
-                        <li>Organisation et rigueur</li>
-                        <li>Autonomie et esprit d’équipe</li>
-                        <li>Adaptabilité face aux défis</li>
-                     </ul>
-                  </div>
-               </div>
-               <p>
-                  En dehors de mes études, je pratique le <strong>badminton</strong> et joue de la <strong>batterie</strong>, deux activités 
-                  qui cultivent ma persévérance, ma créativité et ma discipline.
-               </p>
+
+      <aside class="terminal-card" aria-label="Apercu du workflow d'ingenierie" data-i18n-aria-label="hero.terminal_aria">
+        <div class="terminal-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <p data-i18n="hero.terminal_header">quality-run.log</p>
+        </div>
+        <pre><code data-i18n="hero.terminal_code">$ npm run quality:full
+> lint ............. OK
+> accessibilite .... OK
+> tests ............ OK
+> perf-budget ...... OK
+> security-check ... OK
+
+Cible de deploiement: production</code></pre>
+      </aside>
+    </section>
+
+    <section id="approach" class="section-shell reveal">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="approach.eyebrow">METHODE DE TRAVAIL</p>
+        <h2 data-i18n="approach.title">Construire des choses complexes, les rendre fiables.</h2>
+      </div>
+      <div class="approach-grid">
+        <article class="card reveal delay-1">
+          <h3 data-i18n="approach.card1_title">Architecture d'abord</h3>
+          <p data-i18n="approach.card1_text">Je priorise des frontieres claires, des contrats explicites et des composants maintenables avant de faire grossir les features.</p>
+        </article>
+        <article class="card reveal delay-2">
+          <h3 data-i18n="approach.card2_title">Securite par defaut</h3>
+          <p data-i18n="approach.card2_text">Le code defensif, l'hygiene de dependances et les pratiques de hardening sont integres des le depart.</p>
+        </article>
+        <article class="card reveal delay-3">
+          <h3 data-i18n="approach.card3_title">Pipeline qualite</h3>
+          <p data-i18n="approach.card3_text">Checks automatises, budgets de performance et tests de non-regression pilotent chaque livraison.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section-shell reveal">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="projects.eyebrow">PROJETS SELECTIONNES</p>
+        <h2 data-i18n="projects.title">Des projets qui demontrent une vraie profondeur technique.</h2>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filtres de projets" data-i18n-aria-label="projects.filters_aria">
+        <button class="chip is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="projects.filter_all">Tout</button>
+        <button class="chip" type="button" data-filter="automation" aria-pressed="false" data-i18n="projects.filter_automation">Automatisation</button>
+        <button class="chip" type="button" data-filter="web" aria-pressed="false" data-i18n="projects.filter_web">Web</button>
+        <button class="chip" type="button" data-filter="game" aria-pressed="false" data-i18n="projects.filter_game">Jeu</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal" data-category="game automation">
+          <img src="Images/Roblox_SbProject.png" alt="Capture du projet Moon's Script Builder" loading="lazy" decoding="async" data-i18n-alt="projects.p1_alt">
+          <div class="project-body">
+            <p class="project-tag" data-i18n="projects.p1_tag">Game Tooling / Lua</p>
+            <h3 data-i18n="projects.p1_title">Moon's Script Builder</h3>
+            <p data-i18n="projects.p1_desc">Environnement d'execution de scripts en direct sur Roblox avec systeme de commandes, sandbox utilisateur et workflows d'ingestion de contenu externe.</p>
+            <ul>
+              <li data-i18n="projects.p1_b1">8949 lignes de code au total</li>
+              <li data-i18n="projects.p1_b2">206 commandes coeur</li>
+              <li data-i18n="projects.p1_b3">Integration proxy et datastore</li>
+            </ul>
+            <div class="project-links">
+              <a class="text-link" href="https://www.roblox.com/games/18507545955/Moons-Script-Builder" target="_blank" rel="noopener noreferrer" data-i18n="projects.p1_link_live">Projet live</a>
             </div>
-         </section>
-         <div class="separateur diagonale"></div>
-         <section id="projets" class="projets-section">
-            <h2 class="titre-mes-projets">Mes Projets Personnels</h2>
-            <div class="projet">
-               <div class="projet-image-container">
-                  <a href="#img1" class="projet-image-link">
-                     <img src="Images/Roblox_SbProject.png" alt="Projet Roblox" class="projet-image">
-                  </a>
-               </div>
-               <div class="projet-contenu">
-                  <h2>Interpréteur Lua 5.1 (Luau)</h2>
-                  <p>Plus couramment appelé « Script Builder Place » dans Roblox est une expérience où les joueurs peuvent écrire et exécuter leurs propres scripts Lua en temps réel. Elle offre un éditeur de code intégré, un environnement sécurisé (sandbox), et des outils pour tester des idées ou apprendre le développement dans Roblox, celle-ci possède de multiples fonctions personnalisables afin d’améliorer le confort des utilisateurs.</p>
-                  <a href="Projets.html#MSB" class="en-savoir-plus">En Savoir Plus</a>
-               </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="web automation">
+          <img src="Images/ChromeExtenstion.png" alt="Capture de l'extension de traduction d'images" loading="lazy" decoding="async" data-i18n-alt="projects.p2_alt">
+          <div class="project-body">
+            <p class="project-tag" data-i18n="projects.p2_tag">Extension Navigateur</p>
+            <h3 data-i18n="projects.p2_title">Image Translator Extension</h3>
+            <p data-i18n="projects.p2_desc">Extension Chrome qui extrait le texte depuis des images, le traduit et recompose le visuel pour accelerer la lecture de mangas et documents.</p>
+            <ul>
+              <li data-i18n="projects.p2_b1">Pipeline OCR integre</li>
+              <li data-i18n="projects.p2_b2">Traitement cote client</li>
+              <li data-i18n="projects.p2_b3">Flux d'overlay de traduction</li>
+            </ul>
+            <div class="project-links">
+              <a class="text-link" href="https://github.com/N3uralCreativity/image-translator-extension" target="_blank" rel="noopener noreferrer" data-i18n="projects.p2_link_source">Code source</a>
+              <a class="text-link" href="https://github.com/N3uralCreativity/image-translator-extension/archive/refs/tags/v1.0.2.zip" target="_blank" rel="noopener noreferrer" data-i18n="projects.p2_link_download">Telecharger</a>
             </div>
-            <div id="img1" class="boite-lumiere">
-               <div class="boite-lumiere-contenu">
-                  <img src="Images/Roblox_SbProject.png" alt="Projet Roblox">
-                  <a href="#projets" class="boite-lumiere-close">&times;</a>
-               </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="web">
+          <div class="project-placeholder" aria-hidden="true"></div>
+          <div class="project-body">
+            <p class="project-tag" data-i18n="projects.p3_tag">Frontend Engineering</p>
+            <h3 data-i18n="projects.p3_title">Portfolio Platform v2</h3>
+            <p data-i18n="projects.p3_desc">Refonte complete centree sur une identite visuelle forte, l'accessibilite, la performance et une livraison statique securisee.</p>
+            <ul>
+              <li data-i18n="projects.p3_b1">Structure semantique et accessible</li>
+              <li data-i18n="projects.p3_b2">Systeme de motion responsive</li>
+              <li data-i18n="projects.p3_b3">Hardening via CSP et liens externes securises</li>
+            </ul>
+            <div class="project-links">
+              <a class="text-link" href="#contact" data-i18n="projects.p3_link">Demander une presentation detaillee</a>
             </div>
-            <div class="projet reverse">
-               <div class="projet-image-container">
-                  <a href="#img2" class="projet-image-link">
-                     <img src="Images/ChromeExtenstion.png" alt="Extension Chrome" class="projet-image">
-                  </a>
-               </div>
-               <div class="projet-contenu">
-                  <h2>Extension Chrome</h2>
-                  <p>Ce projet est une extension chrome qui extrait le texte provenant d’images sur un site, le traduit et replace celui-ci sur le texte précédent afin de pouvoir lire dans le langage correct. Principalement utilisé pour lire des mangas (scans) en ligne, qui n’ont pas encore été traduit (pour les impatients).</p>
-                  <a href="Projets.html#Extension" class="en-savoir-plus">En Savoir Plus</a>
-               </div>
-            </div>
-            <div id="img2" class="boite-lumiere">
-               <div class="boite-lumiere-contenu">
-                  <img src="Images/ChromeExtenstion.png" alt="Extension Chrome">
-                  <a href="#projets" class="boite-lumiere-close">&times;</a>
-               </div>
-            </div>
-         </section>
-         <div class="separateur vague-inverse"></div>
-         <section id="contact" class="section section-contact">
-            <h2>Contactez-Moi</h2>
-            <div class="infos-contact">
-               <p><strong>Mail :</strong> <a href="mailto:leo.peron33@gmail.com">leo.peron33@gmail.com</a></p>
-               <p><strong>Téléphone :</strong> 0645908781</p>
-               <p><strong>Discord :</strong> leoperon.</p>
-            </div>
-         </section>
-      </main>
-      <pied-de-page class="pied-de-page">
-         <p>&copy; 2024 LEO PERON 2A. Tous droits réservés.</p>
-      </pied-de-page>
-   </body>
+          </div>
+        </article>
+      </div>
+      <div class="projects-more">
+        <a class="btn btn-primary" href="Projets.html" data-i18n="projects.full_library">Voir la bibliotheque complete</a>
+      </div>
+    </section>
+
+    <section id="stack" class="section-shell reveal">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="stack.eyebrow">STACK D'INGENIERIE</p>
+        <h2 data-i18n="stack.title">Outils et domaines avec lesquels je travaille.</h2>
+      </div>
+
+      <div class="stack-belt" aria-hidden="true">
+        <p data-i18n="stack.belt">JavaScript | TypeScript | Python | Lua | SQL | Git | API Design | UX Engineering | Secure Coding | Automation</p>
+        <p data-i18n="stack.belt">JavaScript | TypeScript | Python | Lua | SQL | Git | API Design | UX Engineering | Secure Coding | Automation</p>
+      </div>
+
+      <div class="stack-grid">
+        <article class="skill-card reveal delay-1">
+          <h3 data-i18n="stack.card1_title">Langages</h3>
+          <p data-i18n="stack.card1_text">Lua, Python, JavaScript, TypeScript, SQL, Java</p>
+        </article>
+        <article class="skill-card reveal delay-2">
+          <h3 data-i18n="stack.card2_title">Product Engineering</h3>
+          <p data-i18n="stack.card2_text">Architecture frontend, composants reutilisables, gestion d'etat et boucle d'amelioration UX.</p>
+        </article>
+        <article class="skill-card reveal delay-3">
+          <h3 data-i18n="stack.card3_title">Pratiques Dev</h3>
+          <p data-i18n="stack.card3_text">Strategie Git, code review, reflexes CI et durcissement progressif en production.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" class="section-shell reveal">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="timeline.eyebrow">PARCOURS</p>
+        <h2 data-i18n="timeline.title">De l'experimentation a la discipline produit.</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="reveal delay-1">
+          <h3 data-i18n="timeline.i1_title">2013 - Phase d'inspiration</h3>
+          <p data-i18n="timeline.i1_text">Decouverte des ecosystemes de script builders et debut des experimentations sur des outils runtime.</p>
+        </li>
+        <li class="reveal delay-2">
+          <h3 data-i18n="timeline.i2_title">2021 - Changement d'echelle</h3>
+          <p data-i18n="timeline.i2_text">Moon's Script Builder atteint environ un million de joueurs et valide des choix d'architecture a grande echelle.</p>
+        </li>
+        <li class="reveal delay-3">
+          <h3 data-i18n="timeline.i3_title">2023+ - Evolution securite et moderation</h3>
+          <p data-i18n="timeline.i3_text">Adaptation des decisions produit face a des contraintes de moderation plus strictes et a la gestion de risques.</p>
+        </li>
+        <li class="reveal delay-4">
+          <h3 data-i18n="timeline.i4_title">Aujourd'hui - Portfolio v2</h3>
+          <p data-i18n="timeline.i4_text">Construction d'une vitrine plus forte avec des fondations frontend qualite et production-ready.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contact" class="section-shell contact-shell reveal">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="contact.eyebrow">CONTACT</p>
+        <h2 data-i18n="contact.title">Disponible pour stage et collaborations de dev.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <article class="contact-card reveal delay-1">
+          <h3 data-i18n="contact.email_title">Email</h3>
+          <a href="mailto:leo.peron33@gmail.com">leo.peron33@gmail.com</a>
+          <button id="copy-email" class="btn btn-ghost" type="button" data-email="leo.peron33@gmail.com" data-i18n="contact.copy_email">Copier l'email</button>
+        </article>
+        <article class="contact-card reveal delay-2">
+          <h3 data-i18n="contact.github_title">GitHub</h3>
+          <a href="https://github.com/N3uralCreativity" target="_blank" rel="noopener noreferrer">github.com/N3uralCreativity</a>
+        </article>
+        <article class="contact-card reveal delay-3">
+          <h3 data-i18n="contact.direct_title">Direct</h3>
+          <p data-i18n="contact.phone">Telephone : 06 45 90 87 81</p>
+          <p data-i18n="contact.discord">Discord : leoperon.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <span data-i18n="footer.prefix">Copyright</span>
+      <span id="year">2026</span>
+      <span data-i18n="footer.suffix">Leo Peron. Tous droits reserves.</span>
+    </p>
+  </footer>
+</body>
 </html>

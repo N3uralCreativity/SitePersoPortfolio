@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta id="meta-description" name="description" content="Catalogue complet de projets techniques de Leo Peron.">
+  <meta id="meta-description" name="description" content="Detail complet d'un projet du portfolio de Leo Peron.">
   <meta name="theme-color" content="#0f2233">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
-  <title>Leo Peron | Bibliotheque de Projets</title>
+  <title>Leo Peron | Fiche Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/projects.css">
   <script src="assets/js/projects-source.js" defer></script>
-  <script src="assets/js/projects-list.js" defer></script>
+  <script src="assets/js/project-detail.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content" data-i18n="skip.link">Aller au contenu</a>
@@ -29,7 +29,7 @@
     <a class="brand" href="index.html" aria-label="Retour accueil">
       <span class="brand-mark"></span>
       <span class="brand-text">LEO PERON</span>
-      <span class="brand-role" data-i18n="brand.role">Bibliotheque Projets</span>
+      <span class="brand-role" data-i18n="brand.role">Detail Projet</span>
     </a>
 
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -41,8 +41,8 @@
 
     <nav id="site-nav" class="site-nav" aria-label="Navigation principale" data-i18n-aria-label="nav.aria">
       <a href="index.html" data-i18n="nav.back_home">Retour accueil</a>
-      <a href="#catalog" data-i18n="nav.catalog">Catalogue</a>
-      <a href="#about-data" data-i18n="nav.about_data">A propos des donnees</a>
+      <a href="Projets.html" data-back-to-catalog data-i18n="nav.back_catalog">Retour catalogue</a>
+      <a href="#main-content" data-i18n="nav.details">Fiche detail</a>
     </nav>
 
     <div class="lang-switch" role="group" aria-label="Selection de langue" data-i18n-aria-label="lang.aria">
@@ -51,54 +51,59 @@
     </div>
   </header>
 
-  <noscript>
-    <p class="noscript-banner">JavaScript est desactive. Active-le pour charger le catalogue dynamique des projets.</p>
-  </noscript>
-
   <main id="main-content" class="projects-main">
-    <section id="catalog" class="section-shell projects-hero reveal is-visible">
-      <p class="eyebrow" data-i18n="hero.eyebrow">BASE PROJETS COMPLETE</p>
-      <h1 data-i18n="hero.title">31 projets techniques, de Roblox a SQL, avec detail complet.</h1>
-      <p data-i18n="hero.lead">Cette page est construite a partir de Projets.md et centralise les objectifs, l'implementation et les livrables de chaque travail.</p>
-      <div class="stats-grid">
-        <article class="stat-box">
-          <strong id="stat-total">0</strong>
-          <span data-i18n="hero.total_label">Projets references</span>
-        </article>
-        <article class="stat-box">
-          <strong id="stat-groups">0</strong>
-          <span data-i18n="hero.group_label">Domaines</span>
-        </article>
-        <article class="stat-box">
-          <strong id="stat-detail">0</strong>
-          <span data-i18n="hero.detail_label">Pages detail</span>
-        </article>
+    <section class="section-shell detail-hero reveal is-visible">
+      <p id="project-eyebrow" class="eyebrow" data-i18n="hero.eyebrow">FICHE PROJET COMPLETE</p>
+      <div class="detail-topline">
+        <p id="project-number" class="catalog-index">#00</p>
+        <a class="text-link" href="Projets.html" data-back-to-catalog data-i18n="hero.back">Retour a la bibliotheque</a>
       </div>
+      <h1 id="project-title">Chargement...</h1>
+      <p id="project-summary" class="detail-summary">Chargement des details du projet...</p>
+      <figure id="project-media" class="detail-media"></figure>
+      <div class="detail-meta">
+        <p><strong data-i18n="hero.group">Domaine</strong>: <span id="project-group">-</span></p>
+        <p><strong data-i18n="hero.tags">Tags</strong>:</p>
+        <ul id="project-tags" class="detail-tags"></ul>
+      </div>
+      <p id="language-note" class="language-note" hidden></p>
     </section>
 
-    <section class="section-shell toolbar-shell reveal is-visible">
-      <div class="toolbar-row">
-        <label for="catalog-search" data-i18n="toolbar.search_label">Recherche</label>
-        <input id="catalog-search" class="catalog-search" type="search" placeholder="Rechercher un projet, une techno, un mot-cle...">
+    <section class="section-shell detail-insights reveal is-visible">
+      <div class="insight-grid">
+        <article class="insight-card">
+          <h2 data-i18n="insight.challenge">Difficulte cle</h2>
+          <p id="insight-challenge"></p>
+        </article>
+        <article class="insight-card">
+          <h2 data-i18n="insight.solution">Solution mise en place</h2>
+          <p id="insight-solution"></p>
+        </article>
+        <article class="insight-card">
+          <h2 data-i18n="insight.impact">Impact mesurable</h2>
+          <p id="insight-impact"></p>
+        </article>
       </div>
-      <div class="toolbar-row">
-        <label data-i18n="toolbar.group_label">Filtrer par domaine</label>
-        <div id="group-filters" class="group-filters" role="group" aria-label="Filtres"></div>
-      </div>
-      <p id="result-count" class="result-count">0 projets affiches</p>
+      <article class="timeline-box">
+        <h2 data-i18n="insight.timeline">Roadmap technique</h2>
+        <ol id="project-timeline" class="project-timeline"></ol>
+      </article>
+    </section>
+
+    <section class="section-shell detail-grid reveal is-visible">
+      <div id="detail-sections" class="detail-sections"></div>
+      <aside class="detail-sidebar">
+        <article id="detail-links" class="detail-box"></article>
+        <article class="detail-box detail-nav-links">
+          <a id="nav-prev" class="text-link is-disabled" href="#">Projet precedent</a>
+          <a id="nav-next" class="text-link is-disabled" href="#">Projet suivant</a>
+        </article>
+      </aside>
     </section>
 
     <section class="section-shell reveal is-visible">
-      <p id="language-note" class="language-note" hidden></p>
-      <div id="catalog-grid" class="catalog-grid" aria-live="polite"></div>
-    </section>
-
-    <section id="about-data" class="section-shell reveal is-visible">
-      <article class="about-box">
-        <h2 data-i18n="data.about_title">A propos des donnees</h2>
-        <p data-i18n="data.about_p1">Source unique: Projets.md. Le catalogue et les pages detail sont generes a partir de ce fichier.</p>
-        <p data-i18n="data.about_p2">Tu peux enrichir simplement en editant Projets.md: la liste et les fiches se mettront a jour automatiquement.</p>
-      </article>
+      <h2 data-i18n="related.title">Projets lies</h2>
+      <div id="related-grid" class="related-grid"></div>
     </section>
   </main>
 
